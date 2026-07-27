@@ -1,0 +1,10 @@
+# This file is machine-generated - editing it directly is not advised
+
+julia_version = "1.12.6"
+manifest_format = "2.0"
+project_hash = "f07dc0cc1fbf10db37140c1d29b9cc12253ac0f0"
+
+[[deps.SpectralLines]]
+path = "."
+uuid = "cd40e1e5-3471-48e2-9172-144f5d64a913"
+version = "0.0.1"
