@@ -1,14 +1,15 @@
-using SpectralLines
-using Test
-using Aqua
-using JET
+using Test, SafeTestsets
 
-@testset "SpectralLines.jl" begin
-    @testset "Code quality (Aqua.jl)" begin
-        Aqua.test_all(SpectralLines)
-    end
-    @testset "Code linting (JET.jl)" begin
-        JET.test_package(SpectralLines; target_defined_modules = true)
-    end
-    # Write your tests here.
+
+@safetestset "Faddeyeva" begin
+    include("test_faddeyeva.jl")
+end
+
+@safetestset "Code quaity (Aqua.jl)" begin
+    using Aqua, SpectralLines
+    Aqua.test_all(SpectralLines)
+end
+
+@safetestset "Code linting (JET.jl)" begin
+    include("test_jet.jl")
 end
