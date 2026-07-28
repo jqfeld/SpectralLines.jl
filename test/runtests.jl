@@ -7,6 +7,8 @@ end
 
 @safetestset "Lineshapes" begin
     @safetestset "Gaussian" include("test_gaussian.jl")
+    @safetestset "Lorentzian" include("test_lorentzian.jl")
+    @safetestset "Voigt" include("test_voigt.jl")
 end
 
 @safetestset "Code quality (Aqua.jl)" begin
