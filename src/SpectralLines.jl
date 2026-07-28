@@ -1,5 +1,7 @@
 module SpectralLines
 
-# Write your package code here.
+
+include("faddeyeva.jl")
+
 
 end
