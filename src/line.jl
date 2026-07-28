@@ -43,3 +43,6 @@ end
 @inline (l::Line{T,LS})(x) where {T,LS} = l.amplitude * l.shape(x - l.position)
 
 integrate(l::Line, a, b) = l.amplitude * integrate(l.shape, a - l.position, b - l.position)
+
+calculate_lines!(ret, xs, lines, method) = error("Line synthesis method $(typeof(method)) is not implemented.")
+calculate_lines(xs, lines, method) = error("Line synthesis method $(typeof(method)) is not implemented.")
