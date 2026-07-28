@@ -5,7 +5,11 @@ using Test, SafeTestsets
     include("test_faddeyeva.jl")
 end
 
-@safetestset "Code quaity (Aqua.jl)" begin
+@safetestset "Lineshapes" begin
+    @safetestset "Gaussian" include("test_gaussian.jl")
+end
+
+@safetestset "Code quality (Aqua.jl)" begin
     using Aqua, SpectralLines
     Aqua.test_all(SpectralLines)
 end
