@@ -1,3 +1,6 @@
 [deps]
 Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 SpectralLines = "cd40e1e5-3471-48e2-9172-144f5d64a913"
+
+[compat]
+Documenter = "1.17.0"
