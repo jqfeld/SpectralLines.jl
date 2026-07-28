@@ -9,6 +9,7 @@ end
     @safetestset "Gaussian" include("test_gaussian.jl")
     @safetestset "Lorentzian" include("test_lorentzian.jl")
     @safetestset "Voigt" include("test_voigt.jl")
+    @safetestset "PseudoVoigt" include("test_pseudo_voigt.jl")
 end
 
 @safetestset "Code quality (Aqua.jl)" begin

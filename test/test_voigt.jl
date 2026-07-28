@@ -34,6 +34,7 @@ const test_points = [0.01, 0.1, 0.5, 1.0, 2.0, 3.0, 10.0, 100., 1000., 1e5]
             for sigma in test_sigmas
                 l = Voigt(gamma, sigma)
                 @test l(fwhm(l) / 2) / l(0) ≈ 0.5 rtol = 1e-3
+                @test hwhm(Voigt(1.0, 0.5)) ≈ fwhm(Voigt(1.0, 0.5)) / 2
             end
         end
     end
@@ -99,9 +100,6 @@ const test_points = [0.01, 0.1, 0.5, 1.0, 2.0, 3.0, 10.0, 100., 1000., 1e5]
         end
     end
 
-    @testset "hwhm" begin
-        @test hwhm(Voigt(1.0, 0.5)) ≈ fwhm(Voigt(1.0, 0.5)) / 2
-    end
 
     @testset "integrate" begin
         # GH branch (y = γ/(σ√2) ≥ 0.7): exact additivity and accurate for wide intervals
