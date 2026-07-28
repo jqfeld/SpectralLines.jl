@@ -26,5 +26,8 @@ include("lineshapes/pseudo_voigt.jl")
 export PseudoVoigt, Thompson, Kielkopf, Olivero, LiuLin, Rocco
 
 
+include("line.jl")
+export Line
+
 
 end

@@ -12,6 +12,10 @@ end
     @safetestset "PseudoVoigt" include("test_pseudo_voigt.jl")
 end
 
+@safetestset "Line" begin
+    include("test_line.jl")
+end
+
 @safetestset "Code quality (Aqua.jl)" begin
     using Aqua, SpectralLines
     Aqua.test_all(SpectralLines)
